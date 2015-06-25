@@ -1,0 +1,17 @@
+{
+  "name": "sock",
+  "version": "0.0.1",
+  "description": "Wrapper class over socket to handle reconnection and buffering when connection is dropped",
+  "main": "socket.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Socket"
+  ],
+  "author": "Kshitij Burman",
+  "license": "MIT",
+  "dependencies": {
+    "q": "^1.4.1"
+  }
+}

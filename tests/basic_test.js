@@ -160,7 +160,8 @@ describe('parser', function () {
 		}).should.not.throw()
 	})
 
-	it('check it can read', function (done) {
+	// need to rewrite test
+	it.skip('check it can read', function (done) {
 		portfinder.getPort(function (err, port) {
 			// ok if there was problem finding port throw it
 			if(err) throw err;
@@ -180,6 +181,10 @@ describe('parser', function () {
 
 			parser.on('msg', function (msg) {
 				msg.should.be.eql('hello world')
+				clearTimeout(timeout_handle)
+				server.close()
+				app.destroy()
+				done()
 			})
 			app.on('connected', function  () {
 				console.log('connected')
